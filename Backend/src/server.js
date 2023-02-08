@@ -13,6 +13,8 @@ const credentials = JSON.parse(
     fs.readFileSync('./credentials.json')
 );
 
+console.log("hii", process.env.PRIVATE_KEY)
+
 admin.initializeApp({
     credential : admin.credential.cert({
         ...credentials,
